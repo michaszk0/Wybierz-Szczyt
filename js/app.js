@@ -135,20 +135,36 @@ $(function() {
     });
   }
 
+  // $("#button").click(function() {
+  //     $('html, body').animate({
+  //         scrollTop: $("#myDiv").offset().top
+  //     }, 2000);
+  // });
+
 
   //Wywołanie addGóra na klik
   button1.on("click", function(e) {
-
+    $("#myCarousel").hide();
     e.preventDefault();
     addGora();
+
+    //animacja przewinięcia do wczytanej góry
+    $('html, body').animate({
+        scrollTop: $("#przewin").offset().top
+    }, 2000);
 
   })
 
   //Wywołanie randomGora na klik
   button2.on("click", function(e) {
-
+    $("#myCarousel").hide();
     e.preventDefault();
     randomGora();
+    
+    //animacja przewinięcia do wczytanej góry
+    $('html, body').animate({
+        scrollTop: $("#przewin").offset().top
+    }, 2000);
 
   })
 });
