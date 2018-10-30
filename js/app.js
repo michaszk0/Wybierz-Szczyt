@@ -99,6 +99,7 @@ $(function() {
 
       for (var i = 0; i < r.length; i++) {
         if (r[i].id == random) {
+        // zduplikowany kod, wystarczy wynieść to do metody która będzie wywołana tu i w addGora.
           var li = $("<h2>").text(r[i].name);
           var height = $("<p>").text('Wysokość: ' + r[i].height);
           var img = $("<img class='img'>").attr('src', r[i].url);
